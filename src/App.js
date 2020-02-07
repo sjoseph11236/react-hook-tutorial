@@ -7,6 +7,25 @@ function Todo({todo, index}) {
   )
 }
 
+// A form component
+function TodoForm({ addTodo }) {
+  const [value, setValue ] = useState('');
+
+  const handleSubmit = e => {
+    e.prventDefault();
+    if(!value) return;
+    addTodo(value);
+    //Clears the form
+    setValue('');
+  }
+
+  return(
+    <Form onSubmit={handleSubmit}>
+      <input type="text" className='input' value={value} onChange={e => setValue(e.target.value)}/>
+    </Form>
+  )
+}
+
 function App() {
   // Create state
   // use state has two vairables: value of the state, function to update the state
