@@ -4,7 +4,11 @@
 - use
 ## SET-UP:
  - Run this command: `create-react-app directory_name`.
+ - use state has two variables: value of the state, function to update the state
 
+```
+const [value_of_state, function_to_update_state] = useState()
+```
 
 ### SOURCES: 
 

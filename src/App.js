@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
-function Todo(props) {
-  const { todo, index } = props;
+import './App.css';
+
+function Todo({todo, index}) {
+  return(
+    <div className="todo">{todo.text}</div>
+  )
 }
+
 function App() {
   // Create state
   // use state has two vairables: value of the state, function to update the state
