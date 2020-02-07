@@ -12,7 +12,7 @@ function TodoForm({ addTodo }) {
   const [value, setValue ] = useState('');
 
   const handleSubmit = e => {
-    e.prventDefault();
+    e.preventDefault();
     if(!value) return;
     addTodo(value);
     //Clears the form
@@ -20,9 +20,14 @@ function TodoForm({ addTodo }) {
   }
 
   return(
-    <Form onSubmit={handleSubmit}>
-      <input type="text" className='input' value={value} onChange={e => setValue(e.target.value)}/>
-    </Form>
+    <form onSubmit={handleSubmit}>
+      <input 
+        type="text" 
+        className='input' 
+        placeholder='Add Todo...'
+        value={value} onChange={e => setValue(e.target.value)}
+        />
+    </form>
   )
 }
 
@@ -54,7 +59,7 @@ function App() {
       <div className="todo-list">
         {/* map through all the todos */}
         {todos.map((todo, index) => (
-          <Todo ket={index} index={index} todo={todo} />
+          <Todo key={index} index={index} todo={todo} />
         ))}
         <TodoForm addTodo={addTodo}/>
       </div>
