@@ -1,10 +1,10 @@
 # REACT HOOKS
 
 - React hooks allow you to use state in functional component.
-
+- use
 ## SET-UP:
  - Run this command: `create-react-app directory_name`.
- -
+
 
 ### SOURCES: 
 
